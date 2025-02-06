@@ -1,0 +1,46 @@
+* {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+
+.container {
+     height: 100dvh;
+     width: 100dvw;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 0 10%;
+     background: #5088c4;
+     color: white;
+}
+
+main.maintain {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     height: 100%;
+     gap: 5%;
+
+}
+.main_icon {
+     animation: rotate 4s  infinite alternate;
+     font-size: 20dvh;
+}
+.main_icon.icon2{
+     font-size: 24dvh;
+}
+
+.content .note {
+     width: 90%;
+
+}
+
+
+@keyframes rotate {
+     to {
+          rotate: 360deg;
+     }
+}

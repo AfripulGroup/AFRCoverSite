@@ -95,6 +95,20 @@
         }
       }
     </script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-668365072"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-668365072");
+    </script>
     <script>
       //if user visited this page first then disable popup on others
       const adShownVal = sessionStorage.getItem("adsShown");
@@ -139,9 +153,7 @@
               >
               <div class="dropdown-menu m-0">
                 <a href="Techimpart.html" class="dropdown-item">Tech Impart</a>
-                <a
-                  href="school-website-application.html"
-                  class="dropdown-item"
+                <a href="school-website-application.html" class="dropdown-item"
                   >School Website Application</a
                 >
                 <!-- <a href="404.html" class="dropdown-item">404 Page</a> -->

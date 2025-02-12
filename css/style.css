@@ -436,7 +436,7 @@ h6,
 }
 
 @media (max-width: 991.98px) {
-  
+
   .hero-overlay {
     padding: 6rem 0 9rem 0;
 
@@ -846,4 +846,8 @@ h6,
 .footer .copyright a:hover,
 .footer .footer-menu a:hover {
   color: var(--secondary);
+}
+
+.text-opacity-75 {
+  opacity: .75;
 }

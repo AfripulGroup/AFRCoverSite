@@ -25,24 +25,21 @@
     }
   });
 
-  // Custom js for nav 
+  // Custom js for nav
   let navOpen = false;
-  $(".navbar button.navbar-toggler").click(function (e) { 
+  $(".navbar button.navbar-toggler").click(function (e) {
     // e.preventDefault();
     navOpen = !navOpen;
-    console.log("Clicked", navOpen)
+    console.log("Clicked", navOpen);
 
-    if(navOpen === true){
+    if (navOpen === true) {
       $(".navbar").addClass("nav-open");
       $(".next-time").addClass("nav-open");
-
-    }else {
+    } else {
       $(".navbar").removeClass("nav-open");
       $(".next-time").removeClass("nav-open");
-
-    };
+    }
   });
-
 
   // Back to top button
   $(window).scroll(function () {
@@ -115,10 +112,11 @@
   let charIndex = 0;
   let isDeleting = false;
   const typeEffect = () => {
+    if (!dynamicText) return;
     const currentWord = words[wordIndex];
     const currentChar = currentWord.substring(0, charIndex);
     dynamicText.textContent = currentChar;
-    dynamicText.classList.add("stop-blinking");
+    dynamicText?.classList.add("stop-blinking");
     if (!isDeleting && charIndex < currentWord.length) {
       // If condition is true, type the next character
       charIndex++;
@@ -130,14 +128,12 @@
     } else {
       // If word is deleted then switch to the next word
       isDeleting = !isDeleting;
-      dynamicText.classList.remove("stop-blinking");
+      dynamicText?.classList.remove("stop-blinking");
       wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
       setTimeout(typeEffect, 1200);
     }
   };
   typeEffect();
 })(jQuery);
-
-
 
 // Contact Form

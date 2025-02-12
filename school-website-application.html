@@ -97,7 +97,12 @@
     <link href="lib/animate/animate.min.css" rel="stylesheet" />
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
-
+    <!-- Add Toastify.js CDN for Toast Notifications -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
 
@@ -126,14 +131,19 @@
     </script>
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-668365072"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-668365072"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'AW-668365072');
-</script>
+      gtag("config", "AW-668365072");
+    </script>
 
     <style>
       .form-loader {
@@ -244,7 +254,9 @@
           <div class="container my-5 py-5 px-lg-5">
             <div class="row g-5 py-5">
               <div class="col-12 text-center">
-                <h1 class="text-white animated slideInDown">School Website Apllication Form</h1>
+                <h1 class="text-white animated slideInDown">
+                  School Website Apllication Form
+                </h1>
                 <hr class="bg-white mx-auto mt-0" style="width: 90px" />
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb justify-content-center">
@@ -266,18 +278,486 @@
       </div>
       <!-- Navbar & Hero End -->
       <div class="container-xxl">
-        <div class="form-loader">
-          <div class="loader"></div>
-        </div>
+        <div class="row justify-content-center my-3" id="formBody">
+          <div class="col-md-8">
+            <!-- Marketing Header Card -->
+            <div class="card shadow mb-2 ">
+              <div class="card-body bg-primary bg-gradient text-white p-4">
+                <h2 class="display-6 text-white fw-bold text-center mb-4">
+                  <i class="fas fa-graduation-cap me-2"></i>Transform Your
+                  School's Digital Presence
+                </h2>
 
-        <iframe
-          class="google-form"
-          src="https://forms.gle/xgVZG4A55YrhF5VM7"
-          width="100%"
-          id="Iframe"
-        >
-          Loading…
-        </iframe>
+                <div class="bg-white text-primary rounded p-3 mb-4">
+                  <h2 class="h4 fw-bold text-center mb-0 text-secondary">
+                    🌟 Special Offer: Complete Website Package for Just $90! 🌟
+                  </h2>
+                  <p class="text-center mt-2">
+                    (Or CFA 50k | NGN 100k | GHC 1000)
+                  </p>
+                </div>
+
+                <div class="row g-4 mb-4">
+                  <div class="col-md-6">
+                    <div class="h5 mb-3 text-white">📦 What You Get:</div>
+                    <ul class="list-unstyled">
+                      <li>
+                        <i class="fas fa-check-circle me-2"></i>6 Months FREE
+                        Hosting
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle me-2"></i>2 Months Website
+                        Management
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle me-2"></i>FREE Custom
+                        Flyer Design (2x)
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle me-2"></i>One-Year Domain
+                        Name
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="h5 mb-3 text-white">🎯 Benefits:</div>
+                    <ul class="list-unstyled">
+                      <li>
+                        <i class="fas fa-star me-2"></i>Attract More Students
+                      </li>
+                      <li>
+                        <i class="fas fa-star me-2"></i>Showcase Achievements
+                      </li>
+                      <li>
+                        <i class="fas fa-star me-2"></i>Build School Community
+                      </li>
+                      <li>
+                        <i class="fas fa-star me-2"></i>24/7 Online Presence
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="bg-white text-dark rounded p-3 mb-3">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                      <i class="fas fa-clock text-primary fs-3"></i>
+                    </div>
+                    <div class="col">
+                      <h3 class="h5 text-primary mb-0">Limited Time Offer!</h3>
+                      <p class="mb-0">
+                        Fill out the form below to secure this amazing deal
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Form Card -->
+            <div class="card shadow">
+              <div class="card-header position-relative bg-primary text-center p-5" style="background: url('/img/application_form_bg.jpeg') top no-repeat; background-size: cover; overflow: hidden;">
+                <h3 class="mb-0 text-white " style="z-index: 2; position: relative;">
+                  School Website (Massive Promotion)
+                </h3>
+                <div class="position-absolute start-0 top-0 w-100 h-100" style="opacity: 10; background-color: #00000070; z-index: 1;"></div>
+              </div>
+              <div class="card-body">
+                <form id="schoolForm" onsubmit="handleSubmit(event)">
+                  <div class="mb-3">
+                    <label for="schoolName" class="form-label text-dark"
+                      >School Name *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="schoolName"
+                      name="schoolName"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="contactPerson" class="form-label text-dark"
+                      >Contact Person Name *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="contactPerson"
+                      name="contactPerson"
+                      required
+                    />
+                    <div class="form-text">
+                      The name of the person filling out the form
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email" class="form-label text-dark"
+                      >Email Address *</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      required
+                    />
+                    <div class="form-text">
+                      To follow up with the right person
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="phone" class="form-label text-dark"
+                      >Contact Phone Number *</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="phone"
+                      name="phone"
+                      required
+                    />
+                    <div class="form-text">For direct communication</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="location" class="form-label text-dark"
+                      >School Location *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="location"
+                      name="location"
+                      required
+                    />
+                    <div class="form-text">
+                      To understand your geographic location
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="domain" class="form-label text-dark"
+                      >Preferred Website Domain Name *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="domain"
+                      name="domain"
+                      required
+                    />
+                    <div class="form-text">e.g (myschool.com)</div>
+                  </div>
+
+                  <div class="mb-3" id="form-key-features">
+                    <label class="form-label text-dark"
+                      >Key Features Required on the Website *</label
+                    >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input feature-checkbox"
+                        type="checkbox"
+                        id="admissionForm"
+                        name="features"
+                        value="Online Admission Form"
+                      />
+                      <label
+                        class="form-check-label text-dark text-opacity-75"
+                        for="admissionForm"
+                        >Online Admission Form</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input feature-checkbox"
+                        type="checkbox"
+                        id="gallery"
+                        name="features"
+                        value="Photo Gallery"
+                      />
+                      <label
+                        class="form-check-label text-dark text-opacity-75"
+                        for="gallery"
+                        >Photo Gallery</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input feature-checkbox"
+                        type="checkbox"
+                        id="calendar"
+                        name="features"
+                        value="Event Calendar"
+                      />
+                      <label
+                        class="form-check-label text-dark text-opacity-75"
+                        for="calendar"
+                        >Event Calendar</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input feature-checkbox"
+                        type="checkbox"
+                        id="news"
+                        name="features"
+                        value="News Updates"
+                      />
+                      <label
+                        class="form-check-label text-dark text-opacity-75"
+                        for="news"
+                        >News Updates</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input feature-checkbox"
+                        type="checkbox"
+                        id="contact"
+                        name="features"
+                        value="Contact Page"
+                      />
+                      <label
+                        class="form-check-label text-dark text-opacity-75"
+                        for="contact"
+                        >Contact Page</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input feature-checkbox"
+                        type="checkbox"
+                        id="about"
+                        name="features"
+                        value="About Page"
+                      />
+                      <label
+                        class="form-check-label text-dark text-opacity-75"
+                        for="about"
+                        >About Page</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="otherFeature"
+                      />
+                      <label
+                        class="form-check-label text-dark text-opacity-75"
+                        for="otherFeature"
+                        >Other</label
+                      >
+                    </div>
+                    <div class="mt-2 collapse" id="otherFeatureField">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="otherFeatureText"
+                        name="otherFeatures"
+                        placeholder="Please specify other features"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="mb-3" id="form-school-online-presence">
+                    <label class="form-label text-dark"
+                      >School's Current Online Presence *</label
+                    >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="onlinePresence"
+                        id="noWebsite"
+                        value="No Website"
+                        required
+                      />
+                      <label
+                        class="form-check-label text-dark text-opacity-75"
+                        for="noWebsite"
+                        >No Website</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="onlinePresence"
+                        id="basicWebsite"
+                        value="Basic Website"
+                      />
+                      <label
+                        class="form-check-label text-dark text-opacity-75"
+                        for="basicWebsite"
+                        >Basic Website (Needs Improvement)</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="onlinePresence"
+                        id="activeWebsite"
+                        value="Active Website"
+                      />
+                      <label
+                        class="form-check-label text-dark text-opacity-75"
+                        for="activeWebsite"
+                        >Active Website (Looking for Redesign)</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="onlinePresence"
+                        id="otherPresence"
+                        value="Other"
+                      />
+                      <label
+                        class="form-check-label text-dark text-opacity-75"
+                        for="otherPresence"
+                        >Other</label
+                      >
+                    </div>
+                    <div class="mt-2 collapse" id="otherPresenceField">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="otherPresenceText"
+                        name="otherPresence"
+                        placeholder="Please specify your current online presence"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label text-dark"
+                      >Preferred Communication Method *</label
+                    >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="communication"
+                        id="emailComm"
+                        value="Email"
+                        required
+                      />
+                      <label
+                        class="form-check-label text-dark text-opacity-75"
+                        for="emailComm"
+                        >Email</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="communication"
+                        id="phoneComm"
+                        value="Phone"
+                      />
+                      <label
+                        class="form-check-label text-dark text-opacity-75"
+                        for="phoneComm"
+                        >Phone Call</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="communication"
+                        id="whatsappComm"
+                        value="WhatsApp"
+                      />
+                      <label
+                        class="form-check-label text-dark text-opacity-75"
+                        for="whatsappComm"
+                        >WhatsApp</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="communication"
+                        id="otherComm"
+                        value="Other"
+                      />
+                      <label
+                        class="form-check-label text-dark text-opacity-75"
+                        for="otherComm"
+                        >Other</label
+                      >
+                    </div>
+                    <div class="mt-2 collapse" id="communicationDetails">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="communicationDetailsText"
+                        name="communicationDetails"
+                        required
+                        placeholder="Please provide your contact details for the selected method"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="comments" class="form-label text-dark"
+                      >Additional Comments or Special Requests</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="comments"
+                      name="comments"
+                      rows="3"
+                    ></textarea>
+                  </div>
+
+                  <div id="submitSpinner" class="d-none">
+                    <div class="spinner-border text-primary" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <span class="ms-2">Submitting form...</span>
+                  </div>
+
+                  <div
+                    id="successMessage"
+                    class="alert alert-success d-none"
+                    role="alert"
+                  >
+                    Form submitted successfully! We'll get back to you soon.
+                  </div>
+
+                  <div
+                    id="errorMessage"
+                    class="alert alert-danger d-none"
+                    role="alert"
+                  >
+                    An error occurred. Please try again later.
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    id="submitButton"
+                  >
+                    Submit
+                  </button>
+                  <button type="reset" class="btn btn-secondary">
+                    Clear form
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Footer Start -->
@@ -414,25 +894,208 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-
+    <!-- Toastify.js -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <!-- For announcement  -->
     <script src="js/timer.js"></script>
-    <script type="text/javascript">
-      const frame = document.getElementById("Iframe");
-      console.log(frame);
-      // Adjusting the iframe height onload event
-      frame.onload = function () {
-        frame.classList.add("loaded");
-        document.querySelector(".form-loader").style.display = "none";
-        // set the height of the iframe as
-        console.log(frame.contentWindow.document.body.scrollHeight);
-        // the height of the iframe content
-
-        // set the width of the iframe as the
-        // width of the iframe content
+    <script>
+      // Field mapping for spreadsheet headers
+      const fieldMapping = {
+        timestamp: "Timestamp",
+        schoolName: "School Name",
+        contactPerson: "Contact Person Name",
+        email: "Email Address",
+        phone: "Contact Phone Number",
+        location: "School Location",
+        domain: "Preferred Domain Name",
+        features: "Required Features",
+        onlinePresence: "Current Online Presence",
+        otherPresence: "Other Online Presence Details",
+        communication: "Preferred Communication Method",
+        communicationDetails: "Communication Details",
+        comments: "Additional Comments",
       };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const otherFeature = document.getElementById("otherFeature");
+        const otherFeatureField = document.getElementById("otherFeatureField");
+
+        otherFeature.addEventListener("change", function () {
+          if (this.checked) {
+            otherFeatureField.classList.add("show");
+            otherFeatureField.setAttribute("required", "");
+          } else {
+            otherFeatureField.classList.remove("show");
+            otherFeatureField.removeAttribute("required");
+          }
+        });
+
+        document
+          .querySelector("#form-school-online-presence")
+          .addEventListener("change", (event) => {
+            // Check if the event target is one of our checkboxes
+            if (event.target.matches('input[name="onlinePresence"]')) {
+              const othersCheckbox = document.getElementById("otherPresence");
+              const othersField = document.getElementById("otherPresenceField");
+
+              if (othersCheckbox.checked) {
+                othersField.classList.add("show");
+                othersField.setAttribute("required", "");
+              } else {
+                othersField.removeAttribute("required");
+                othersField.classList.remove("show");
+              }
+            }
+          });
+
+        const communicationInputs = document.querySelectorAll(
+          'input[name="communication"]'
+        );
+        const communicationDetails = document.getElementById(
+          "communicationDetails"
+        );
+        const communicationDetailsText = document.getElementById(
+          "communicationDetailsText"
+        );
+
+        communicationInputs.forEach((input) => {
+          input.addEventListener("change", function () {
+            communicationDetails.classList.add("show");
+            switch (this.id) {
+              case "whatsappComm":
+                communicationDetailsText.setAttribute("type", "text");
+                communicationDetailsText.placeholder =
+                  "Enter your WhatsApp number";
+                break;
+              case "phoneComm":
+                communicationDetailsText.setAttribute("type", "text");
+                communicationDetailsText.placeholder =
+                  "Enter your phone number";
+                break;
+              case "emailComm":
+                communicationDetailsText.setAttribute("type", "email");
+                communicationDetailsText.placeholder =
+                  "Enter your email address";
+                break;
+              case "otherComm":
+                communicationDetailsText.setAttribute("type", "text");
+                communicationDetailsText.placeholder =
+                  "Please specify your preferred communication method and details";
+                break;
+            }
+          });
+        });
+      });
+
+      async function handleSubmit(event) {
+        event.preventDefault();
+        let submitting = false; // Track submission status
+
+        const submitButton = document.getElementById("submitButton");
+        const submitSpinner = document.getElementById("submitSpinner");
+        const successMessage = document.getElementById("successMessage");
+        const errorMessage = document.getElementById("errorMessage");
+
+        if (submitting) {
+          Toastify({
+            text: "Submission in progress. Please wait...",
+            background: "#094994",
+            duration: 3000,
+          }).showToast();
+          return;
+        }
+        submitting = true;
+        submitButton.disabled = true;
+        submitSpinner.classList.remove("d-none");
+        successMessage.classList.add("d-none");
+        errorMessage.classList.add("d-none");
+
+        try {
+          const formData = new FormData(event.target);
+
+          const features = [];
+          document
+            .querySelectorAll(".feature-checkbox:checked")
+            .forEach((checkbox) => {
+              features.push(checkbox.value);
+            });
+
+          if (document.getElementById("otherFeature").checked) {
+            features.push(document.getElementById("otherFeatureText").value);
+          }
+
+          formData.set("features", features.join(", "));
+
+          // Convert FormData to JSON with mapped field names
+          const formJson = {};
+          for (const [key, value] of formData.entries()) {
+            formJson[fieldMapping[key] || key] = value?.trim();
+          }
+
+          const requiredFields = [
+            "School Name",
+            "Contact Person Name",
+            "Email Address",
+            "Contact Phone Number",
+            "School Location",
+            "Preferred Domain Name",
+            "Required Features",
+            "Current Online Presence",
+            "Preferred Communication Method",
+            "Communication Details",
+          ];
+          // Validate that required fields are not empty
+          const unfilledRequiredField =
+            !requiredFields.every((field) => {
+              console.log(formJson[field]);
+              return !!formJson[field];
+            }) ||
+            (formJson["Current Online Presence"].toLowerCase() === "others" &&
+              !formJson["Other Online Presence Details"]);
+
+          if (unfilledRequiredField) {
+            Toastify({
+              text: "Please fill in all fields.",
+              background: "red",
+              duration: 3000,
+            }).showToast();
+            return;
+          }
+
+          const scriptUrl =
+            "https://script.google.com/macros/s/AKfycbxdSeloQVAeOz4mkYte8r9-O9gUcv0a2wTMpLMITstiw4K0YFzGhUFdM3HdtELbOU3-ZA/exec";
+          const response = await fetch(scriptUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formJson),
+          });
+
+          if (response.ok) {
+            successMessage.classList.remove("d-none");
+            event.target.reset();
+          } else {
+            errorMessage.classList.remove("d-none");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          Toastify({
+            text: "Failed to submit form. Please try again later.",
+            background: "red",
+            duration: 3000,
+          }).showToast();
+          errorMessage.classList.remove("d-none");
+        } finally {
+          submitSpinner.classList.add("d-none");
+          submitButton.disabled = false;
+        }
+      }
     </script>
   </body>
 </html>

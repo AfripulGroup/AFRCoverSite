@@ -1071,9 +1071,7 @@
             "https://script.google.com/macros/s/AKfycbxdSeloQVAeOz4mkYte8r9-O9gUcv0a2wTMpLMITstiw4K0YFzGhUFdM3HdtELbOU3-ZA/exec";
           const response = await fetch(scriptUrl, {
             method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
+        
             body: JSON.stringify(formJson),
           });
 
